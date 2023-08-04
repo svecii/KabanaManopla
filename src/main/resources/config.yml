@@ -1,0 +1,12 @@
+# Configurações do KabanaManopla
+
+Database:
+  Type: "SQLITE" # [SQLITE, MYSQL]
+  Sqlite:
+    Filename: "database.db"
+  Host: "localhost:3306"
+  Database: "kabana"
+  User: "root"
+  Password: "kabana2023"
+
+# Gerais

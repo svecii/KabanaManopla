@@ -1,0 +1,9 @@
+name: KabanaManopla
+version: '${project.version}'
+main: com.git.hub.natanfoleto.kabanamanopla.KabanaManopla
+api-version: 1.8.8
+softdepend:
+  - HolographicDisplays
+authors:
+  - NatanFoleto
+  - Swagviper
