@@ -1,0 +1,16 @@
+com\github\natanfoleto\kabanamanopla\loaders\SettingsLoader.class
+com\github\natanfoleto\kabanamanopla\database\Adapters\UserAdapter.class
+com\github\natanfoleto\kabanamanopla\storages\UserStorage.class
+com\github\natanfoleto\kabanamanopla\loaders\DatabaseLoader.class
+com\github\natanfoleto\kabanamanopla\KabanaManopla.class
+com\github\natanfoleto\kabanamanopla\database\repositories\UserRepository.class
+com\github\natanfoleto\kabanamanopla\entities\Database.class
+com\github\natanfoleto\kabanamanopla\managers\DatabaseManager.class
+com\github\natanfoleto\kabanamanopla\storages\DatabaseStorage.class
+com\github\natanfoleto\kabanamanopla\loaders\UserLoader.class
+com\github\natanfoleto\kabanamanopla\helpers\FileHelper.class
+com\github\natanfoleto\kabanamanopla\helpers\YamlHelper.class
+com\github\natanfoleto\kabanamanopla\listeners\PlayerListener.class
+com\github\natanfoleto\kabanamanopla\entities\User.class
+com\github\natanfoleto\kabanamanopla\database\DatabaseFactory.class
+com\github\natanfoleto\kabanamanopla\managers\UserManager.class

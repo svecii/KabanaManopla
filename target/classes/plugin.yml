@@ -1,5 +1,5 @@
 name: KabanaManopla
-version: '${project.version}'
+version: '1.0'
 main: com.github.natanfoleto.kabanamanopla.KabanaManopla
 api-version: 1.8.8
 softdepend:
