@@ -1,0 +1,148 @@
+Joias:
+  # A chave abaixo, precisa ter o mesmo nome que a chave do item em menus/manopla.yml
+  mineracao:
+    # Nome de exibição da jóia (chat)
+    Nome: "Jóia da Mineração"
+    # Item da jóia
+    Item:
+      CustomSkull: true
+      URL: 36161daa3589ec9c8187459ac36fd4dd2646c040678d3bfacb72a2210c6c801c
+      ID: 264
+      Data: 0
+      Name: '§bJóia da Mineração'
+      # Essa é a lore do item normal, o item recebido através do /darjoia
+      Lore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder da mineração.'
+        - ''
+        - '§7Para §aativar §7segure o item'
+        - '§7e clique com o botão §adireito§7!'
+      # Essa é a lore da jóia ativada no /manopla
+      CustomLore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder da mineração.'
+        - ''
+        - '§7Clique com o botão §cdireito'
+        - '§7para §cdesativar §7a jóia!'
+    Buff:
+      # Comandos executados ao ativar a jóia
+      # Ativar: [] - Para desativar essa opção
+      Ativar:
+        - coins give {player} 10
+      # Comandos executados ao desativar a jóia
+      # Desativar: [] - Para desativar essa opção
+      Desativar:
+        - coins remove {player} 10
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave do item em menus/manopla.yml
+  pescaria:
+    # Nome de exibição da jóia (chat)
+    Nome: "Jóia da Pescaria"
+    # Item da jóia
+    Item:
+      CustomSkull: true
+      URL: b28f1c0c5092e12d33770df45c5845a9610886039b34abe93a16c5e942dfc8e4
+      ID: 388
+      Data: 0
+      Name: '§aJóia da Pescaria'
+      # Essa é a lore do item normal, o item recebido através do /darjoia
+      Lore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder da pescaria.'
+        - ''
+        - '§7Para §aativar §7segure o item'
+        - '§7e clique com o botão §adireito§7!'
+      # Essa é a lore da jóia ativada no /manopla
+      CustomLore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder da pescaria.'
+        - ''
+        - '§7Clique com o botão §cdireito'
+        - '§7para §cdesativar §7a jóia!'
+    Buff:
+      # Comandos executados ao ativar a jóia
+      # Ativar: [] - Para desativar essa opção
+      Ativar:
+        - coins give {player} 10
+      # Comandos executados ao desativar a jóia
+      # Desativar: [] - Para desativar essa opção
+      Desativar:
+        - coins remove {player} 10
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave do item em menus/manopla.yml
+  geradores:
+    # Nome de exibição da jóia (chat)
+    Nome: "Jóia dos Geradores"
+    # Item da jóia
+    Item:
+      CustomSkull: true
+      URL: 7a1ee5ffce04eb7da592d42414ff35e1bf38194d6b82e310dbc6261b47fb9c91
+      ID: 263
+      Data: 0
+      Name: '§5Jóia dos Geradores'
+      # Essa é a lore do item normal, o item recebido através do /darjoia
+      Lore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder dos geradores.'
+        - ''
+        - '§7Para §aativar §7segure o item'
+        - '§7e clique com o botão §adireito§7!'
+      # Essa é a lore da jóia ativada no /manopla
+      CustomLore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder dos geradores.'
+        - ''
+        - '§7Clique com o botão §cdireito'
+        - '§7para §cdesativar §7a jóia!'
+    Buff:
+      # Comandos executados ao ativar a jóia
+      # Ativar: [] - Para desativar essa opção
+      Ativar:
+        - coins give {player} 10
+      # Comandos executados ao desativar a jóia
+      # Desativar: [] - Para desativar essa opção
+      Desativar:
+        - coins remove {player} 10
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave do item em menus/manopla.yml
+  armazem:
+    # Nome de exibição da jóia (chat)
+    Nome: "Jóia do Armazém"
+    # Item da jóia
+    Item:
+      CustomSkull: true
+      URL: 4b1cce22de19ed6727abc5e6c2d57864c871a44c956bbe2eb3960269b686b8b3
+      ID: 266
+      Data: 0
+      Name: '§6Jóia do Armazém'
+      # Essa é a lore do item normal, o item recebido através do /darjoia
+      Lore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder do armazém.'
+        - ''
+        - '§7Para §aativar §7segure o item'
+        - '§7e clique com o botão §adireito§7!'
+      # Essa é a lore da jóia ativada no /manopla
+      CustomLore:
+        - ''
+        - '§7Essa jóia te da o'
+        - '§7poder do armazém.'
+        - ''
+        - '§7Clique com o botão §cdireito'
+        - '§7para §cdesativar §7a jóia!'
+    Buff:
+      # Comandos executados ao ativar a jóia
+      # Ativar: [] - Para desativar essa opção
+      Ativar:
+        - coins give {player} 10
+      # Comandos executados ao desativar a jóia
+      # Desativar: [] - Para desativar essa opção
+      Desativar:
+        - coins remove {player} 10

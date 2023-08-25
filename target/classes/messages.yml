@@ -1,6 +1,31 @@
+# Placeholders
+##
+# {jewel} = Nome da jóia
+# {name} = Nome do jogador
+# {minutes} = Cooldown de ativação da jóia
+
 # Mensagens do plugin
 Plugin:
-  Recarregar: "§7Iniciando recarregamento do plugin."
-  Recarregado: "§aPlugin recarregado com sucesso."
+  Recarregar: '§7Iniciando recarregamento do plugin.'
+  Recarregado: '§aPlugin recarregado com sucesso.'
 
-# Mensagens
+# Mensagens do gerenciamento de jóias
+Joia:
+  NaoEncontrada: '§cEssa jóia não existe.'
+  SemEspacoNoInventario: '§cSem espaço no inventário para receber a jóia.'
+  Entregue: '§aVocê deu a §7{jewel} §apara o jogador §7{name}§a.'
+  StaffAtivou: '§aVocê ativou a §7{jewel} §apara o jogador §7{name}§a.'
+  StaffDesativou: '§eVocê desativou a §7{jewel} §epara o jogador §7{name}§e.'
+  StaffJaAtivou: '§cEste jogador já tem esta jóia ativada.'
+  StaffNaoAtivou: '§cEste jogador ainda não tem essa jóia ativada.'
+  PlayerAtivou: '§aVocê ativou a §7{jewel}§a.'
+  PlayerDesativou: '§eVocê desativou a §7{jewel}§e.'
+  PlayerJaAtivou: '§cVocê já ativou esta jóia.'
+  PlayerNaoAtivou: '§cVocê ainda não tem essa jóia ativada.'
+  EspereParaAtivar: '§cVocê poderá ativar a §7{jewel} §cem §7{minutes} minuto(s)§c.'
+
+# Outras mensagens
+Outras:
+  JogadorOffline: '§cEste jogador está offline.'
+  SemPermissao: '§cVocê não tem permissão para executar este comando.'
+  ComandoNaoPermitidoNoConsole: '§cEste comando não pode ser executado pelo console.'

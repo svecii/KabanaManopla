@@ -1,0 +1,46 @@
+Nome: '§8Manopla'
+Tamanho: 27
+Itens:
+  # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
+  mineracao:
+    Slot: 10
+    Id: 160
+    Data: 11
+    Name: '§bJóia da Mineração'
+    Lore:
+      - ''
+      - '§7A jóia aparecerá'
+      - '§7aqui quando for §aativada§7.'
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
+  pescaria:
+    Slot: 12
+    Id: 160
+    Data: 5
+    Name: '§aJóia da Pescaria'
+    Lore:
+      - ''
+      - '§7A jóia aparecerá'
+      - '§7aqui quando for §aativada§7.'
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
+  geradores:
+    Slot: 14
+    Id: 160
+    Data: 10
+    Name: '§5Jóia dos Geradores'
+    Lore:
+      - ''
+      - '§7A jóia aparecerá'
+      - '§7aqui quando for §aativada§7.'
+
+  # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
+  armazem:
+    Slot: 16
+    Id: 160
+    Data: 4
+    Name: '§eJóia da Armazém'
+    Lore:
+      - ''
+      - '§7A jóia aparecerá'
+      - '§7aqui quando for §aativada§7.'

@@ -7,3 +7,14 @@ softdepend:
 authors:
   - NatanFoleto
   - Swagviper
+commands:
+  gauntlet:
+    aliases: [manopla]
+  givejewel:
+    aliases: [darjoia, givejoia]
+  activatejewel:
+    aliases: [ativarjoia, activatejoia]
+  deactivatejewel:
+    aliases: [desativarjoia, deactivatejoia]
+  kabanamanopla:
+    aliases: [manoplareload, reloadmanopla]

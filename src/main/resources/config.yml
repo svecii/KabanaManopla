@@ -1,7 +1,12 @@
 # Configurações do KabanaManopla
 
+# Placeholders
+##
+# {name} = Nome do jogador (Para mensagens do chat)
+# {player} = Nome do jogador (Para comandos executados)
+
 Database:
-  Type: "SQLITE" # [SQLITE, MYSQL]
+  Type: "MYSQL" # [SQLITE, MYSQL]
   Sqlite:
     Filename: "database.db"
   Host: "localhost:3306"
@@ -9,4 +14,26 @@ Database:
   User: "root"
   Password: "kabana2023"
 
-# Gerais
+Joia:
+  # Tempo que o jogador precisará esperar para ativar uma jóia específica novamente
+  # Em minutos
+  DelayAtivarNovamente: 5
+
+# Ações para quando um jogador completar todas as jóias
+EstalarDeDedos:
+  Buff:
+    # Comandos executados ao ativar todas as jóias
+    # Ativar: [] - Para desativar essa opção
+    Ativar:
+      - coins give {player} 100
+    # Comandos executados ao não ter mais todas as jóias ativadas
+    # Desativar: [] - Para desativar essa opção
+    Desativar:
+      - coins remove {player} 100
+  Anuncio:
+    - ''
+    - '§6Estalar de Dedos'
+    - '§fO jogador §7{name} §fativou todas as jóias do infinito!'
+    - ''
+  Animacoes:
+    Raio: true

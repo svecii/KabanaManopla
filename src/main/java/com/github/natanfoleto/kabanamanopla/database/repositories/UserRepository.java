@@ -80,4 +80,29 @@ public class UserRepository {
             DatabaseFactory.closeConnection(conn, stmt);
         }
     }
+
+    public static void updateUser(User user) {
+        Connection conn = DatabaseFactory.createConnection();
+
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = conn.prepareStatement("UPDATE kabanamanopla_users SET " +
+                    "`json` = ? " +
+                    "WHERE `key` = ?"
+            );
+
+            Gson gson = new Gson();
+            String json = gson.toJson(user);
+
+            stmt.setString(1, json);
+            stmt.setString(2, user.getName());
+
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }  finally {
+            DatabaseFactory.closeConnection(conn, stmt);
+        }
+    }
 }
