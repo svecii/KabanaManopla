@@ -1,5 +1,5 @@
 Nome: '§8Manopla'
-Tamanho: 36
+Tamanho: 45
 Itens:
   # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
   mineracao:
@@ -53,12 +53,13 @@ Itens:
       - '§7A jóia aparecerá'
       - '§7aqui quando for §aativada§7.'
 
-  # Botão voltar ao menu anterior
-  Voltar:
-    CustomSkull: false
-    URL: ''
+  Ajuda:
+    CustomSkull: true
+    URL: 15b52a5ba47b487a4ea723ccf404b33ac9ed80428c626c099ebee4bb7e6f6363
     Slot: 31
-    Name: '§aVoltar'
-    Id: 262
+    Id: 5
     Data: 0
-    Lore: []
+    Name: '§bAjuda'
+    Lore:
+      - '§fVeja como conseguir cada jóia'
+      - '§fe quais buffs você recebe ao ativa-las'

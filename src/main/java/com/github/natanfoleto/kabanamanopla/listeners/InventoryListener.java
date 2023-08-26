@@ -33,31 +33,6 @@ public class InventoryListener implements Listener {
 
         Player player = (Player) e.getWhoClicked();
 
-        // Menu principal aberto
-        if (e.getView().getTitle().equalsIgnoreCase(getPrincipal().getString("Nome"))) {
-            e.setCancelled(true);
-
-            // Clicou no botão de ajuda
-            if (e.getSlot() == getPrincipal().getInt("Itens.Ajuda.Slot")) {
-                Inventory inv = InventoryUtils.createAjudaMenu();
-
-                player.openInventory(inv);
-                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
-
-                return;
-            }
-
-            // Clicou no botão de jóias
-            if (e.getSlot() == getPrincipal().getInt("Itens.Joias.Slot")) {
-                Inventory inv = InventoryUtils.createManoplaMenu(player);
-
-                player.openInventory(inv);
-                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
-
-                return;
-            }
-        }
-
         // Menu ajuda aberto
         if (e.getView().getTitle().equalsIgnoreCase(getAjuda().getString("Nome"))) {
             e.setCancelled(true);
@@ -66,7 +41,7 @@ public class InventoryListener implements Listener {
 
             // Clicou no botão voltar
             if (e.getSlot() == getAjuda().getInt("Itens.Voltar.Slot")) {
-                Inventory inv = InventoryUtils.createPrincipalMenu();
+                Inventory inv = InventoryUtils.createManoplaMenu(player);
 
                 player.openInventory(inv);
                 player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
@@ -83,9 +58,9 @@ public class InventoryListener implements Listener {
 
             player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
 
-            // Clicou no botão voltar
-            if (e.getSlot() == getManopla().getInt("Itens.Voltar.Slot")) {
-                Inventory inv = InventoryUtils.createPrincipalMenu();
+            // Clicou no botão ajuda
+            if (e.getSlot() == getManopla().getInt("Itens.Ajuda.Slot")) {
+                Inventory inv = InventoryUtils.createAjudaMenu();
 
                 player.openInventory(inv);
                 player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);

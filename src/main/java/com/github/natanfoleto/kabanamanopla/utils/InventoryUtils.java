@@ -18,44 +18,6 @@ import static com.github.natanfoleto.kabanamanopla.loaders.MenuLoader.*;
 import static com.github.natanfoleto.kabanamanopla.loaders.SettingsLoader.*;
 
 public class InventoryUtils {
-    public static Inventory createPrincipalMenu() {
-        Inventory inv = Bukkit.createInventory(
-                null,
-                getPrincipal().getInt("Tamanho"),
-                getPrincipal().getString("Nome")
-        );
-
-        for (String item : getPrincipal().getConfigurationSection("Itens").getKeys(false)) {
-            ItemStack itemStack;
-
-            boolean customSkull = getPrincipal().getBoolean("Itens." + item + ".CustomSkull");
-
-            int itemSlot = getPrincipal().getInt("Itens." + item + ".Slot");
-            String itemName = getPrincipal().getString("Itens." + item + ".Name");
-            List<String> itemLore = getPrincipal().getStringList("Itens." + item + ".Lore");
-
-            if (customSkull) {
-                String url = getPrincipal().getString("Itens." + item + ".URL");
-
-                itemStack = ItemUtils.createSkull(itemName, itemLore, url);
-            } else {
-                int itemId = getPrincipal().getInt("Itens." + item + ".Id");
-                int itemData = getPrincipal().getInt("Itens." + item + ".Data");
-
-                itemStack = ItemUtils.createItem(
-                        itemName,
-                        itemLore,
-                        itemId,
-                        (short) itemData
-                );
-            }
-
-            inv.setItem(itemSlot, itemStack);
-        }
-
-        return inv;
-    }
-
     public static Inventory createAjudaMenu() {
         Inventory inv = Bukkit.createInventory(
                 null,

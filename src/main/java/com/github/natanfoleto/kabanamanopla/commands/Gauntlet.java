@@ -24,7 +24,7 @@ public class Gauntlet implements CommandExecutor {
             return false;
         }
 
-        Inventory inv = InventoryUtils.createPrincipalMenu();
+        Inventory inv = InventoryUtils.createManoplaMenu((Player) sender);
 
         ((Player) sender).openInventory(inv);
 
