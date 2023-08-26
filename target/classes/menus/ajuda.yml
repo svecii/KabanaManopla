@@ -1,0 +1,111 @@
+Nome: '§8Manual do infinito'
+Tamanho: 54
+Itens:
+  Pergaminho:
+    CustomSkull: true
+    URL: 2d5b58d6e7d4cd987d081b91efe09ee0d2078f0db43f50d0a6cf3b32770aea4f
+    Slot: 0
+    Id: 5
+    Data: 0
+    Name: '§bPergaminho secreto'
+    Lore:
+      - ''
+      - '§7▸ §fVeja abaixo o segredo de cada jóia'
+      - '§7▸ §fComo e onde encontrar'
+      - '§7▸ §fPoderes que você terá ativando-as'
+      - '§7▸ §fComo liberar o poder do §bEstalar de Dedos'
+
+  Mineracao:
+    CustomSkull: true
+    URL: 36161daa3589ec9c8187459ac36fd4dd2646c040678d3bfacb72a2210c6c801c
+    Slot: 11
+    Id: 5
+    Data: 0
+    Name: '§bJóia da Mineração'
+    Lore:
+      - ''
+      - '§7Essa é a jóia da §bMineração'
+      - ''
+      - '§7Você terá a chance econtra-la ao minerar'
+      - '§7/mina'
+      - ''
+      - '§7Ao ativa-la você receberá um buff'
+      - '§7que te dará 15% a mais de recompensas ao minerar'
+
+  Pescaria:
+    CustomSkull: true
+    URL: b28f1c0c5092e12d33770df45c5845a9610886039b34abe93a16c5e942dfc8e4
+    Slot: 12
+    Id: 5
+    Data: 0
+    Name: '§aJóia da Pescaria'
+    Lore:
+      - ''
+      - '§7Essa é a jóia da §aPescaria'
+      - ''
+      - '§7Você terá a chance econtra-la ao pescar'
+      - '§7/pesca'
+      - ''
+      - '§7Ao ativa-la você receberá um buff'
+      - '§7que te dará 15% a mais de recompensas ao pescar'
+
+  Geradores:
+    CustomSkull: true
+    URL: 7a1ee5ffce04eb7da592d42414ff35e1bf38194d6b82e310dbc6261b47fb9c91
+    Slot: 14
+    Id: 5
+    Data: 0
+    Name: '§5Jóia dos Geradores'
+    Lore:
+      - ''
+      - '§7Essa é a jóia dos §5Geradores'
+      - ''
+      - '§7Você terá a chance econtra-la ao usar as máquinas'
+      - '§7/maquinas'
+      - ''
+      - '§7Ao ativa-la você receberá um buff'
+      - '§7que te dará 15% a mais de recompensas nas máquinas'
+
+  Armazem:
+    CustomSkull: true
+    URL: 4b1cce22de19ed6727abc5e6c2d57864c871a44c956bbe2eb3960269b686b8b3
+    Slot: 15
+    Id: 5
+    Data: 0
+    Name: '§6Jóia do Armazém'
+    Lore:
+      - ''
+      - '§7Essa é a jóia da §6Pescaria'
+      - ''
+      - '§7Você terá a chance econtra-la em suas farms'
+      - '§7/armazem'
+      - ''
+      - '§7Ao ativa-la você receberá um buff'
+      - '§7que te dará 15% a mais de recompensas nas plantações'
+
+  Estalar:
+    CustomSkull: true
+    URL: 64789ba33de5e67eb8807072269959029347a6023f8ec535a3fff305fcd3c833
+    Slot: 31
+    Id: 5
+    Data: 0
+    Name: '§eEstalar de Dedos'
+    Lore:
+      - ''
+      - '§7Esse é o poder supremo do infinito'
+      - ''
+      - '§7Ao ativar todas as jóias'
+      - '§7você terá a manopla completa'
+      - ''
+      - '§7Além de todos os buffs de cada jóia'
+      - '§7você receberá um buff adicional de 50% em cada sistema'
+
+  # Botão voltar ao menu anterior
+  Voltar:
+    CustomSkull: false
+    URL: ''
+    Slot: 49
+    Name: '§aVoltar'
+    Id: 262
+    Data: 0
+    Lore: []

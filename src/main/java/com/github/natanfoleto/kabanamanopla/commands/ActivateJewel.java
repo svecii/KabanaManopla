@@ -1,5 +1,6 @@
 package com.github.natanfoleto.kabanamanopla.commands;
 
+import com.cryptomorin.xseries.messages.Titles;
 import com.github.natanfoleto.kabanamanopla.database.repositories.UserRepository;
 import com.github.natanfoleto.kabanamanopla.entities.Jewel;
 import com.github.natanfoleto.kabanamanopla.entities.User;
@@ -70,15 +71,45 @@ public class ActivateJewel implements CommandExecutor {
             Bukkit.dispatchCommand(sender, eCommand.replace("{player}", targetName));
         }
 
+        sender.sendMessage(
+                getMessages().getString("Joia.StaffAtivou")
+                        .replace("{jewel}", jewel.getName())
+                        .replace("{name}", targetName)
+        );
+
+        if (getConfig().getBoolean("Joia.Title")) {
+            Titles.sendTitle(
+                    target,
+                    getMessages().getString("Joia.TitleAtivou")
+                            .replace("{jewel}", jewel.getName()),
+                    getMessages().getString("Joia.SubtitleAtivou")
+                            .replace("{jewel}", jewel.getName())
+            );
+        }
+
         // Verifica se o jogador tem todas as jóias ativadas
         if (user.getJewels().size() == JewelStorage.getJewels().size()) {
             List<String> enableCommands = getConfig().getStringList("EstalarDeDedos.Buff.Ativar");
-            List<String> announcement = getConfig().getStringList("EstalarDeDedos.Anuncio");
-
 
             // Roda os comandos para ativar os buffs do estalar de dedos
             for (String eCommand : enableCommands) {
                 Bukkit.dispatchCommand(sender, eCommand.replace("{player}", targetName));
+            }
+
+            if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Anuncio")) {
+                List<String> announcement = getMessages().getStringList("EstalarDeDedos.Anuncio");
+
+                announcement.stream()
+                        .map(message -> message.replace("{name}", target.getDisplayName()))
+                        .forEach(target::sendMessage);
+            }
+
+            if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Title")) {
+                Titles.sendTitle(
+                        target,
+                        getMessages().getString("EstalarDeDedos.TitleCompletou"),
+                        getMessages().getString("EstalarDeDedos.SubtitleCompletou")
+                );
             }
 
             if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Raio")) {
@@ -87,17 +118,7 @@ public class ActivateJewel implements CommandExecutor {
 
                 world.strikeLightning(playerLocation);
             }
-
-            announcement.stream()
-                    .map(message -> message.replace("{name}", targetName))
-                    .forEach(sender::sendMessage);
         }
-
-        sender.sendMessage(
-                getMessages().getString("Joia.StaffAtivou")
-                        .replace("{jewel}", jewel.getName())
-                        .replace("{name}", targetName)
-        );
 
         return true;
     }

@@ -1,5 +1,6 @@
 package com.github.natanfoleto.kabanamanopla.commands;
 
+import com.cryptomorin.xseries.messages.Titles;
 import com.github.natanfoleto.kabanamanopla.entities.Jewel;
 import com.github.natanfoleto.kabanamanopla.storages.JewelStorage;
 import com.github.natanfoleto.kabanamanopla.utils.InventoryUtils;

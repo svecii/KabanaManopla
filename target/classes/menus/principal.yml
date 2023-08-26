@@ -1,0 +1,26 @@
+Nome: '§8Menu central'
+Tamanho: 27
+Itens:
+  Ajuda:
+    CustomSkull: true
+    URL: 15b52a5ba47b487a4ea723ccf404b33ac9ed80428c626c099ebee4bb7e6f6363
+    Slot: 11
+    Id: 5
+    Data: 0
+    Name: '§bAjuda'
+    Lore:
+      - '§fVeja como conseguir cada jóia'
+      - '§fe quais buffs você recebe ao ativa-las'
+  Joias:
+    CustomSkull: true
+    URL: 64789ba33de5e67eb8807072269959029347a6023f8ec535a3fff305fcd3c833
+    Slot: 15
+    Id: 386
+    Data: 0
+    Name: '§bManopla'
+    Lore:
+      - ''
+      - '§7Veja suas jóias ativas'
+      - '§7e as joias que faltam na sua manopla'
+      - ''
+      - '§aClique para ver'

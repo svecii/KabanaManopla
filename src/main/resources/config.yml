@@ -6,7 +6,7 @@
 # {player} = Nome do jogador (Para comandos executados)
 
 Database:
-  Type: "MYSQL" # [SQLITE, MYSQL]
+  Type: "SQLITE" # [SQLITE, MYSQL]
   Sqlite:
     Filename: "database.db"
   Host: "localhost:3306"
@@ -18,6 +18,9 @@ Joia:
   # Tempo que o jogador precisará esperar para ativar uma jóia específica novamente
   # Em minutos
   DelayAtivarNovamente: 5
+  # Exibe ou não, um title ao jogador quando ele ativar uma jóia
+  # Mensagem de title configurável em messages.yml (Joia>TitleAtivou, Joia>SubtitleAtivou)
+  Title: true
 
 # Ações para quando um jogador completar todas as jóias
 EstalarDeDedos:
@@ -30,10 +33,11 @@ EstalarDeDedos:
     # Desativar: [] - Para desativar essa opção
     Desativar:
       - coins remove {player} 100
-  Anuncio:
-    - ''
-    - '§6Estalar de Dedos'
-    - '§fO jogador §7{name} §fativou todas as jóias do infinito!'
-    - ''
   Animacoes:
+    # Anuncia para todos os jogadores, configurável em messages.yml (EstalarDeDedos>Anuncio)
+    Anuncio: true
+    # Exibe um title, configurável em messages.yml (EstalarDeDedos>TitleCompletou)
+    Title: true
+    # Lança um raio no jogador
     Raio: true
+

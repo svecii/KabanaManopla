@@ -1,5 +1,6 @@
 package com.github.natanfoleto.kabanamanopla.listeners;
 
+import com.cryptomorin.xseries.messages.Titles;
 import com.github.natanfoleto.kabanamanopla.database.repositories.UserRepository;
 import com.github.natanfoleto.kabanamanopla.entities.Jewel;
 import com.github.natanfoleto.kabanamanopla.entities.User;
@@ -82,15 +83,39 @@ public class PlayerListener implements Listener {
                                            .replace("{jewel}", value.getName())
                            );
 
+                           if (getConfig().getBoolean("Joia.Title")) {
+                               Titles.sendTitle(
+                                       player,
+                                       getMessages().getString("Joia.TitleAtivou")
+                                               .replace("{jewel}", value.getName()),
+                                       getMessages().getString("Joia.SubtitleAtivou")
+                                               .replace("{jewel}", value.getName())
+                               );
+                           }
+
                            // Verifica se o jogador tem todas as jóias ativadas
                            if (user.getJewels().size() == JewelStorage.getJewels().size()) {
                                List<String> enableCommands = getConfig().getStringList("EstalarDeDedos.Buff.Ativar");
-                               List<String> announcement = getConfig().getStringList("EstalarDeDedos.Anuncio");
-
 
                                // Roda os comandos para ativar os buffs do estalar de dedos
                                for (String eCommand : enableCommands) {
                                    Bukkit.dispatchCommand(player, eCommand.replace("{player}", player.getName()));
+                               }
+
+                               if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Anuncio")) {
+                                   List<String> announcement = getMessages().getStringList("EstalarDeDedos.Anuncio");
+
+                                   announcement.stream()
+                                           .map(message -> message.replace("{name}", player.getDisplayName()))
+                                           .forEach(player::sendMessage);
+                               }
+
+                               if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Title")) {
+                                   Titles.sendTitle(
+                                           player,
+                                           getMessages().getString("EstalarDeDedos.TitleCompletou"),
+                                           getMessages().getString("EstalarDeDedos.SubtitleCompletou")
+                                   );
                                }
 
                                if (getConfig().getBoolean("EstalarDeDedos.Animacoes.Raio")) {
@@ -99,10 +124,6 @@ public class PlayerListener implements Listener {
 
                                    world.strikeLightning(playerLocation);
                                }
-
-                               announcement.stream()
-                                       .map(message -> message.replace("{name}", player.getDisplayName()))
-                                       .forEach(player::sendMessage);
                            }
                        }
                     }

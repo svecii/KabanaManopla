@@ -23,6 +23,18 @@ Joia:
   PlayerJaAtivou: '§cVocê já ativou esta jóia.'
   PlayerNaoAtivou: '§cVocê ainda não tem essa jóia ativada.'
   EspereParaAtivar: '§cVocê poderá ativar a §7{jewel} §cem §7{minutes} minuto(s)§c.'
+  TitleAtivou: '§aJóia ativada!'
+  SubtitleAtivou: '§7Você acaba de ativar a {jewel}'
+
+# Mensagens ao ativar todas as jóias
+EstalarDeDedos:
+  Anuncio:
+    - ''
+    - '§6Estalar de Dedos'
+    - '§fO jogador §7{name} §fativou todas as jóias do infinito!'
+    - ''
+  TitleCompletou: '§aVocê conseguiu!'
+  SubtitleCompletou: '§7Ativou todas as jóias do infinito'
 
 # Outras mensagens
 Outras:

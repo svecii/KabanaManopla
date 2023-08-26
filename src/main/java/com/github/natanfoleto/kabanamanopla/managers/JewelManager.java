@@ -16,7 +16,7 @@ public class JewelManager {
 
             boolean customSkull = getJewels().getBoolean("Joias." + jewelKey + ".Item.CustomSkull");
             String itemUrl = getJewels().getString("Joias." + jewelKey + ".Item.URL");
-            int itemId = getJewels().getInt("Joias." + jewelKey + ".Item.ID");
+            int itemId = getJewels().getInt("Joias." + jewelKey + ".Item.Id");
             int itemData = getJewels().getInt("Joias." + jewelKey + ".Item.Data");
             String itemName = getJewels().getString("Joias." + jewelKey + ".Item.Name");
             List<String> itemLore = getJewels().getStringList("Joias." + jewelKey + ".Item.Lore");

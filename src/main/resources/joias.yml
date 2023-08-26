@@ -7,7 +7,7 @@ Joias:
     Item:
       CustomSkull: true
       URL: 36161daa3589ec9c8187459ac36fd4dd2646c040678d3bfacb72a2210c6c801c
-      ID: 264
+      Id: 264
       Data: 0
       Name: '§bJóia da Mineração'
       # Essa é a lore do item normal, o item recebido através do /darjoia
@@ -44,7 +44,7 @@ Joias:
     Item:
       CustomSkull: true
       URL: b28f1c0c5092e12d33770df45c5845a9610886039b34abe93a16c5e942dfc8e4
-      ID: 388
+      Id: 388
       Data: 0
       Name: '§aJóia da Pescaria'
       # Essa é a lore do item normal, o item recebido através do /darjoia
@@ -81,7 +81,7 @@ Joias:
     Item:
       CustomSkull: true
       URL: 7a1ee5ffce04eb7da592d42414ff35e1bf38194d6b82e310dbc6261b47fb9c91
-      ID: 263
+      Id: 263
       Data: 0
       Name: '§5Jóia dos Geradores'
       # Essa é a lore do item normal, o item recebido através do /darjoia
@@ -118,7 +118,7 @@ Joias:
     Item:
       CustomSkull: true
       URL: 4b1cce22de19ed6727abc5e6c2d57864c871a44c956bbe2eb3960269b686b8b3
-      ID: 266
+      Id: 266
       Data: 0
       Name: '§6Jóia do Armazém'
       # Essa é a lore do item normal, o item recebido através do /darjoia

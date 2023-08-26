@@ -1,8 +1,10 @@
 Nome: '§8Manopla'
-Tamanho: 27
+Tamanho: 36
 Itens:
   # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
   mineracao:
+    CustomSkull: false
+    URL: ''
     Slot: 10
     Id: 160
     Data: 11
@@ -14,6 +16,8 @@ Itens:
 
   # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
   pescaria:
+    CustomSkull: false
+    URL: ''
     Slot: 12
     Id: 160
     Data: 5
@@ -25,6 +29,8 @@ Itens:
 
   # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
   geradores:
+    CustomSkull: false
+    URL: ''
     Slot: 14
     Id: 160
     Data: 10
@@ -36,11 +42,23 @@ Itens:
 
   # A chave abaixo, precisa ter o mesmo nome que a chave da jóia em joias.yml
   armazem:
+    CustomSkull: false
+    URL: ''
     Slot: 16
     Id: 160
     Data: 4
-    Name: '§eJóia da Armazém'
+    Name: '§eJóia do Armazém'
     Lore:
       - ''
       - '§7A jóia aparecerá'
       - '§7aqui quando for §aativada§7.'
+
+  # Botão voltar ao menu anterior
+  Voltar:
+    CustomSkull: false
+    URL: ''
+    Slot: 31
+    Name: '§aVoltar'
+    Id: 262
+    Data: 0
+    Lore: []

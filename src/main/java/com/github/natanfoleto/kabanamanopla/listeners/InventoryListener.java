@@ -14,6 +14,7 @@ import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 
@@ -30,14 +31,67 @@ public class InventoryListener implements Listener {
         if (e.getCurrentItem() == null || e.getCurrentItem().getType() == Material.AIR)
             return;
 
+        Player player = (Player) e.getWhoClicked();
+
+        // Menu principal aberto
+        if (e.getView().getTitle().equalsIgnoreCase(getPrincipal().getString("Nome"))) {
+            e.setCancelled(true);
+
+            // Clicou no botão de ajuda
+            if (e.getSlot() == getPrincipal().getInt("Itens.Ajuda.Slot")) {
+                Inventory inv = InventoryUtils.createAjudaMenu();
+
+                player.openInventory(inv);
+                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+                return;
+            }
+
+            // Clicou no botão de jóias
+            if (e.getSlot() == getPrincipal().getInt("Itens.Joias.Slot")) {
+                Inventory inv = InventoryUtils.createManoplaMenu(player);
+
+                player.openInventory(inv);
+                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+                return;
+            }
+        }
+
+        // Menu ajuda aberto
+        if (e.getView().getTitle().equalsIgnoreCase(getAjuda().getString("Nome"))) {
+            e.setCancelled(true);
+
+            player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+            // Clicou no botão voltar
+            if (e.getSlot() == getAjuda().getInt("Itens.Voltar.Slot")) {
+                Inventory inv = InventoryUtils.createPrincipalMenu();
+
+                player.openInventory(inv);
+                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+                return;
+            }
+        }
+
         // Menu manopla aberto
         if (e.getView().getTitle().equalsIgnoreCase(getManopla().getString("Nome"))) {
             e.setCancelled(true);
 
-            Player player = (Player) e.getWhoClicked();
             User user = UserStorage.getUsers().get(player.getDisplayName());
 
             player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+            // Clicou no botão voltar
+            if (e.getSlot() == getManopla().getInt("Itens.Voltar.Slot")) {
+                Inventory inv = InventoryUtils.createPrincipalMenu();
+
+                player.openInventory(inv);
+                player.playSound(player.getLocation(), Sound.CLICK, 1, 2f);
+
+                return;
+            }
 
             if (e.isRightClick()) {
                 for (Map.Entry<String, Jewel> jewel : JewelStorage.getJewels().entrySet()) {
@@ -46,7 +100,7 @@ public class InventoryListener implements Listener {
 
                     if (
                             e.getSlot() == getManopla().getInt("Itens." + key + ".Slot") &&
-                            e.getCurrentItem().getItemMeta().getDisplayName() == value.getItem().getItemMeta().getDisplayName()
+                            e.getCurrentItem().getItemMeta().getDisplayName().equals(value.getItem().getItemMeta().getDisplayName())
                     ) {
                         if (!user.getJewels().contains(key)) {
                             player.sendMessage(getMessages().getString("Joia.PlayerNaoAtivou"));
