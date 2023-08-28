@@ -16,7 +16,7 @@ public class ItemUtils {
     public static ItemStack createItem(
             String name,
             List<String> lore,
-            Integer id,
+            Integer idplayer,
             short data
     ) {
         ItemStack icon = new ItemStack(Material.getMaterial(id), 1, data);
